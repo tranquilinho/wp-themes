@@ -23,10 +23,8 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
-
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-
+		<div id="navigation" class="site-branding">
 		        <?php $header_image = get_header_image();
 			      if ( ! empty( $header_image ) ) { ?>
 		              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -37,26 +35,25 @@
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 			  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
 			  <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
+			</nav>
+		</div> <!-- /navigation -->
+
+		<?php
+		if ( is_front_page()) : ?>
+		    <div id="site-description" class="site-branding">
+				<h1><span class="site-title"><?php bloginfo( 'name' ); ?></span>
+				<?php
+				   $description = get_bloginfo( 'description', 'display' );
+				   if ( $description || is_customize_preview() ) : ?>
+			              <span class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></span>
+				<?php
+				   endif; ?>
+				</h1>
+		    </div><!-- /site-description -->
+		<?php
+   		endif; ?>
 
 
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif; ?>
-
-			<?php
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-
-
-		</div><!-- .site-branding -->
 
 	</header><!-- #masthead -->
 

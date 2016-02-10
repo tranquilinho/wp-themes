@@ -357,7 +357,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #ddd; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -980,3 +980,25 @@ width: 100%;
     float:right;
 }
 
+#navigation{
+    margin: 20px;
+}
+
+#site-description{
+    background-color: #7671a6;
+}
+
+.site-title, .site-description{
+    display: block;
+    color: #eee;
+    font-weight: normal;
+}
+
+.site-title{
+    padding: 30px 50px 0px 50px;
+}
+
+.site-description{
+    font-size: 1.3rem;
+    padding: 0px 50px 30px 50px;
+}
