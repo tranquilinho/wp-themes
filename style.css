@@ -299,6 +299,9 @@ h1{
     margin: 0.67em 0; /* moved here from reset section */
 }
 
+#site-info{
+    font-size: 1rem;
+}
 
 p {
 	margin-bottom: 1.5em;
@@ -978,6 +981,10 @@ object {
     width: 100%;
 }
 
+#contact{
+    padding: 20px 40px;
+}
+
 .site {  
     max-width: 980px;
     /* width: 100%; */
@@ -1025,4 +1032,8 @@ object {
 .site-description{
     font-size: 1.3rem;
     padding: 0px 50px 30px 50px;
+}
+
+#site-info{
+    padding: 20px 40px;
 }

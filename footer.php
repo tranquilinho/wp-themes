@@ -24,12 +24,6 @@
 
     </div><!-- /contact -->       
            
-    <div id="site-info">
-      <a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>
-      <span class="sep"> | </span>
-      <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'bcu' ), 'bcu', '<a href="http://biocomp.cnb.csic.es/" rel="designer">BCU@CNB-CSIC</a>' ); ?>
-    </div><!-- /site-info -->
-  
 <script type='text/javascript'>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -41,8 +35,17 @@
   
 </script>
 
+    <div id="site-info" class="bg-dark">
+      <span>&copy; <?php echo date('Y'); ?> Biocomputing Unit. All Rights Reserved.</span>
+      <div style="float:right">
+	<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>
+	<span class="sep"> | </span>
+	<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'bcu' ), 'bcu', '<a href="http://biocomp.cnb.csic.es/" rel="designer">BCU@CNB-CSIC</a>' ); ?>
+      </div>
+    </div><!-- /site-info -->
+
 </footer><!-- /colophon -->
-<div class="bg-dark">&nbsp;</div>
+
 </div><!-- /page -->
 
 <?php wp_footer(); ?>
