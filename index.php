@@ -9,6 +9,8 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
+ * Suggestions: http://themeshaper.com/2012/11/01/the-wordpress-theme-index-template/
+
  * @package _s
  */
 
@@ -16,7 +18,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
 		<?php
 		if ( have_posts() ) :
 
