@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-<footer id="colophon" class="site-footer" role="contentinfo">
+<footer id="colophon" class="site-footer bg-light" role="contentinfo">
 
     <div id="contact">
 	      Find us at <a href="http://www.cnb.csic.es">Centro Nacional de Biotecnología</a> (CNB). <a href="/directions">Darwin 3</a>.<br>
@@ -42,6 +42,7 @@
 </script>
 
 </footer><!-- /colophon -->
+<div class="bg-dark">&nbsp;</div>
 </div><!-- /page -->
 
 <?php wp_footer(); ?>

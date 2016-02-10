@@ -40,7 +40,7 @@
 
 		<?php
 		if ( is_front_page()) : ?>
-		    <div id="site-description" class="site-branding">
+		    <div id="site-description" class="site-branding bg-light">
 				<h1><span class="site-title"><?php bloginfo( 'name' ); ?></span>
 				<?php
 				   $description = get_bloginfo( 'description', 'display' );

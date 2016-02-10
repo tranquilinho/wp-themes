@@ -226,6 +226,19 @@ th {
 	padding: 0;
 }
 
+/*--------------------------------------------------------------
+# Color
+--------------------------------------------------------------*/
+.bg-light{
+    background-color: #7671a6;
+    color: #eee;
+}
+
+.bg-dark{
+    background-color: #565184;
+    color: #eee;
+}
+
 
 /*--------------------------------------------------------------
 # Typography
@@ -523,9 +536,7 @@ textarea {
 	width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -534,9 +545,18 @@ a {
 	text-decoration: none;
 }
 
+.bg-dark a,.bg-light a{
+    color: #ccc;
+}
+
 a:visited {
 	color: purple;
 }
+
+.bg-dark a:visited, .bg-light a:visited{
+    color: #aaa;
+}
+
 
 a:hover,
 a:focus,
@@ -993,13 +1013,8 @@ object {
     margin: 20px;
 }
 
-#site-description{
-    background-color: #7671a6;
-}
-
 .site-title, .site-description{
     display: block;
-    color: #eee;
     font-weight: normal;
 }
 
