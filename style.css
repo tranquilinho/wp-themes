@@ -995,25 +995,24 @@ object {
 
 /* Three columns, responsive */
 .left-column{
-    width:28%;
+    width:31%;
     padding:0 10px 0 0;
     float:left;
-    margin-left: 4%;
+/*    margin-left: 4%;*/
 }
 
 .mid-column{ 
-    width:28%;
+    width:31%;
     padding:0 10px 0 0;
     float:left;
-    margin-left: 4%;
+    margin-left: 2%;
+    margin-right: 2%; 
 }
  
 .right-column{
-    width:28%;
+    width:31%;
     padding:0 10px 0 0;
     float:right;
-    margin-left: 4%;
-    margin-right: 4%;
 }
 
 #navigation{
@@ -1036,4 +1035,8 @@ object {
 
 #site-info{
     padding: 20px 40px;
+}
+
+.site-main{
+    padding: 10%;
 }
