@@ -822,6 +822,15 @@ a:active {
 	margin: 1.5em 0 0;
 }
 
+.entry-content li{
+    margin: 1.5em 0 0 2em;
+}
+
+#publications_list li{
+    list-style: outside none none;
+}
+
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;

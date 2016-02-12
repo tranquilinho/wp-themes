@@ -12,3 +12,8 @@ Basic structure
 ---------------
 
 Pages -> page.php, content-page.php
+
+Todo
+----
+
+   - finish frontpage
