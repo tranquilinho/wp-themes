@@ -585,6 +585,10 @@ a:active {
 	display: block;
 	float: right;
 	width: 36em;
+	/* bottom align: http://stackoverflow.com/a/585965 */
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
 }
 
 .main-navigation ul {
@@ -752,12 +756,15 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# Clearings
+# Clearings / clearfix (fixing the clearing of floats)
 --------------------------------------------------------------*/
 .clear:before,
 .clear:after,
+/*
+display:table breaks the 3-column layout of homepage...
+Disabling it reduces a bit margin -> compensate in 
 .entry-content:before,
-.entry-content:after,
+.entry-content:after, */
 .comment-content:before,
 .comment-content:after,
 .site-header:before,
@@ -819,7 +826,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 2.5em 0 0;
 }
 
 .entry-content li{
@@ -1030,6 +1037,7 @@ object {
 
 #navigation{
     margin: 20px;
+    position: relative; /* for bottom align of menu, @see .main-navigation */
 }
 
 .site-title, .site-description{
@@ -1051,7 +1059,9 @@ object {
 }
 
 .site-main{
-    padding: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+
 }
 
 #about-logos img{
