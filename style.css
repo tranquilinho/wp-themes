@@ -826,6 +826,10 @@ a:active {
     margin: 1.5em 0 0 2em;
 }
 
+#research li{
+    margin: 0;
+}
+
 #publications_list li{
     list-style: outside none none;
 }
@@ -1048,4 +1052,9 @@ object {
 
 .site-main{
     padding: 10%;
+}
+
+#about-logos img{
+    height: 80px;
+    margin: 0 10px;
 }
