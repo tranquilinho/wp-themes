@@ -18,6 +18,14 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+  <meta property="og:title" content="Title" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Biocomputing Unit"/>
+  <!-- <meta property="og:url" content="http://www.-range" /> -->
+  <meta property="og:description" content="Description">
+
+ <?php /*   <meta property="og:image" content="<?php $featuredImage = get_field('featured_image'); echo esc_url( $featuredImage['url'] ); ?>"/> */ ?>
+
 </head>
 
 <body <?php body_class(); ?>>
