@@ -1013,7 +1013,23 @@ object {
     background: #eee;
 }
 
-/* Three columns, responsive */
+/* 3-column layout, minimum column width 250px */
+
+/* It is easier to define responsive columns using "columns" property,
+   but it is only supported in "recent" browsers... */
+
+/* https://css-tricks.com/guide-responsive-friendly-css-columns/ */
+/* minimum column width 200px, aim for 3 colums if enough space available */
+.three-column{
+  -webkit-columns: 3 250px;
+     -moz-columns: 3 250px;
+          columns: 3 250px;
+}
+
+/* The alternative is to use media queries */
+/* http://codepen.io/Cheesetoast/pen/KFAaq */
+
+/* Default - more than 980px wide */
 .left-column{
     width:31%;
     padding:0 10px 0 0;
@@ -1034,6 +1050,30 @@ object {
     padding:0 10px 0 0;
     float:right;
 }
+
+/* for 980px or less, we can still fit 3 columns */
+
+/* for 700px or less, it's better to switch to single column */
+@media screen and (max-width: 600px) {
+   .left-column {
+	width: auto;
+	float: none;
+	}
+    
+    .mid-column {
+	width: auto;
+	float: none;
+	margin-left: 0px;
+	}
+    
+    .right-column {
+	width: auto;
+	float: none;
+	}
+
+}
+
+
 
 #navigation{
     margin: 20px;
