@@ -18,20 +18,37 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<?php
+/* social tags, @see 
+  https://developers.facebook.com/docs/sharing/best-practices 
+  https://dev.twitter.com/cards/markup 
+  http://ogp.me/ 
+  https://developers.facebook.com/tools/debug/og/object/ 
+  	(note that sometimes you need to press the "fetch new scrape info" twice before the image is actually updated...
+  https://cards-dev.twitter.com/validator                                                                                                                                    */
+?>
   <meta property="og:title" content="<?php echo get_the_title();  ?>" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Biocomputing Unit"/>
   <meta property="og:url" content="<?php echo the_permalink(); ?>" /> 
+
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- <meta name="twitter:site" content="@bcu"> -->
+  <!-- <meta name="twitter:creator" content="@bcu"> -->
+  <meta name="twitter:title" content="<?php echo get_the_title();  ?>">
+
   <?php if(get_the_excerpt()) {
   	    // https://codex.wordpress.org/Excerpt	  ?>
   	    <meta property="og:description" content="<?php echo get_the_excerpt() ?>">
-	    <meta name="description" content="<?php echo get_the_excerpt() ?>">
+	    <meta name="description" content="<?php echo get_the_excerpt() ?>"> 
+	    <meta name="twitter:description" content="<?php echo get_the_excerpt() ?>">
   <?php } ?>
   <?php if (has_post_thumbnail( $post->ID ) ): ?>
-  	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+  	<?php // image must be at least 200x200px
+	 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 	<meta property="og:image" content="<?php echo esc_url($image[0]); ?>"/> 
+	<meta name="twitter:image" content="<?php echo esc_url($image[0]); ?>">
   <?php endif; ?>
-  
 
 </head>
 
